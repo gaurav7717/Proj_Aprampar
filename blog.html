@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="./count.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <style>
+        .btn
+        {
+            background-color: #C4A881;
+            border: 0;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <!-- navbar -->
+
+
+    <header class="text-light" style="height: 85vh; background-image: url('https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+
+        <nav class="navbar navbar-expand-lg navbar-light text-center nav-cust py-4 text-light">
+
+            <!-- Brand/logo -->
+            <div class="logo">
+                <a href="#" class="navbar-brand p-0 m-0 text-light">
+                    <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600;">Aprampar
+                    </p>
+                    <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                </a>
+            </div>
+
+            <div class="list list-nav ms-auto">
+
+                <div class=" collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-center navlist">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Restro&Bar.html">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <span class=""><i class="fa-solid fa-bars" style="color: #C4A881;"></i></span>
+            </button>
+        </nav>
+        <!-- offcanvas -->
+
+
+        <div class="offcanvas offcanvas-top" tabindex="0" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color: #c5a880;">
+            <!-- <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div> -->
+            <div class="offcanvas-body">
+                <div class="list ms-auto canvas">
+
+
+                    <ul class=" navbar-nav text-center d-flex flex-column">
+
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="head-cont text-center">
+            <p class="head-para">ENJOY YOUR WONDERFUL HOLIDAYS WITH A GREAT LUXURY EXPERIENCE!
+            </p>
+            <h1>Most Relaxing Place</h1>
+            <div class="ms-auto me-auto">
+                <button type="button" class="btn head-btn1 py-3 px-5">TAKE A TOUR <span></span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button type="button" class="btn text-light head-btn2 py-3 px-5">LEARN MORE <span></span> <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div> -->
+        <div class="container-fluid mb-4 text-dark text-center head-cont " >
+            <div class="container-fluid py-5 cont-1">
+                <div style="letter-spacing: 1.5px;color: #c5a880;">
+                    <p><a href="" style="text-decoration: none; color: #c5a880; ">Home</a><span>  >  </span>Blog</p>
+                </div>
+                <h1 class=" fw-bold text-light head-main" data-aos="fade-in-bottom" data-aos-duration="1000">
+                   Our Blog
+                </h1>
+                
+
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+
+    <!-- blog -->
+
+    <div class="blog">
+        <h5 id="subhead" class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">OUR BLOG
+        </h5>
+        <div class="title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Recent Blog
+        </div>
+        <div class="blogrow row m-0 mt-5">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1503003378590-66f89f543bc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="blogrow row m-0 mt-5">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1503003378590-66f89f543bc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-left: 39%;">
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">1</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">2</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">3</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">4</button>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+
+
+
+    <!-- footer -->
+
+
+    <footer class="foot" style="background-color: #1A1B1B;">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-lg col-md-6">
+                    <div class="logo">
+                        <a href="#" class="navbar-brand p-0 m-0 text-light">
+                            <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600; ">
+                                Aprampar</p>
+                            <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="" style="color: grey; font-size:small;">A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia.</p>
+                    <br>
+
+                    <ul style="list-style: none;" class="foot-icon p-0">
+                        <li><span class="fa-brands fa-facebook  p-3"></span></li>
+                        <li><span class="fa-brands fa-github  p-3"></span></li>
+                        <li><span class="fa-brands fa-instagram  p-3"></span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Free Wifi</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Easy Booking</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restaurant</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Swimming Pool</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Beauty & Health</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>60" Flatscreen TV</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Cold Aircondition</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Help & Support</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Quick</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>
+                                    Home</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Rooms</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restro & Bar</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Have a Question?</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-map me-2" style="color: #C4A881;"></span>
+                                    03 Fake St. Mountain View, San Francisco, California, USA</a></li>
+                            <li><a href="#"><span class="fa fa-phone me-2" style="color: #C4A881;"></span>7717770208</a>
+                            </li>
+                            <li><a href="#"><span class="fa fa-message me-2"
+                                        style="color: #C4A881;"></span>gauravpradhan7hai@gmail.com</a></li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    //owl-carousel
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

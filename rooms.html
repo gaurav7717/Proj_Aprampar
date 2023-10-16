@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rooms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="./count.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+</head>
+<style>
+    .btn
+    {
+        background-color: #C4A881;
+        border: 0;
+        
+    }
+</style>
+<body>
+    <!-- navbar -->
+
+
+    <header class="text-light" style="height: 85vh; background-image: url('https://images.unsplash.com/photo-1607283920858-d6693b1db8f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+
+        <nav class="navbar navbar-expand-lg navbar-light text-center nav-cust py-4 text-light">
+
+            <!-- Brand/logo -->
+            <div class="logo">
+                <a href="#" class="navbar-brand p-0 m-0 text-light">
+                    <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600;">Aprampar
+                    </p>
+                    <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                </a>
+            </div>
+
+            <div class="list list-nav ms-auto">
+
+                <div class=" collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-center navlist">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Restro&Bar.html">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <span class=""><i class="fa-solid fa-bars" style="color: #C4A881;"></i></span>
+            </button>
+        </nav>
+        <!-- offcanvas -->
+
+
+        <div class="offcanvas offcanvas-top" tabindex="0" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="background-color: #c5a880;">
+            <!-- <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div> -->
+            <div class="offcanvas-body">
+                <div class="list ms-auto canvas">
+
+
+                    <ul class=" navbar-nav text-center d-flex flex-column">
+
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="head-cont text-center">
+            <p class="head-para">ENJOY YOUR WONDERFUL HOLIDAYS WITH A GREAT LUXURY EXPERIENCE!
+            </p>
+            <h1>Most Relaxing Place</h1>
+            <div class="ms-auto me-auto">
+                <button type="button" class="btn head-btn1 py-3 px-5">TAKE A TOUR <span></span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button type="button" class="btn text-light head-btn2 py-3 px-5">LEARN MORE <span></span> <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div> -->
+        <div class="container-fluid mb-4 text-dark text-center head-cont " >
+            <div class="container-fluid py-5 cont-1">
+                <div style="letter-spacing: 1.5px;color: #c5a880;">
+                    <p><a href="" style="text-decoration: none; color: #c5a880; ">Home</a><span>  >  </span>Rooms</p>
+                </div>
+                <h1 class=" fw-bold text-light head-main" data-aos="fade-in-bottom" data-aos-duration="1000">
+                   Cozy Rooms
+                </h1>
+                
+
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+
+
+
+    <!-- check -->
+
+    <div class="container check p-0 row">
+        <div class="checkin regt col my-auto ">
+            <h3 id="subhead">CHECK-IN</h3>
+            <div class="form-field d-flex py-2 me-2" style="display: inline;">
+                <div class="icon my-auto"><span class="fa fa-calendar"></span></div>
+                <input type="text" class="form-control arrival_date in-edit" placeholder="Check-In Date"
+                    style="background-color: transparent; border:0; width: 70%;">
+            </div>
+        </div>
+        <div class="checkout regt col my-auto">
+            <h3 id="subhead">CHECK-OUT</h3>
+            <div class="form-field d-flex py-2 me-2" style="display: inline;">
+                <div class="icon my-auto"><span class="fa fa-calendar"></span></div>
+                <input type="text" class="form-control arrival_date in-edit" placeholder="Check-Out Date"
+                    style="background-color: transparent; border:0; width: 70%;">
+            </div>
+        </div>
+        <div class="checkout regt col ">
+            <h3 id="subhead">ROOMS</h3>
+            <div class="d-flex">
+
+                <div class="my-auto">
+                    <span class="fa fa-chevron-down" style="color: grey;"></span>
+                </div>
+
+                <div>
+                    <select name="" id="" class="form-control py-2 ms-0"
+                        style="background-color: transparent; border:0; width: 100%; color: grey;">
+                        <option value="">Suite</option>
+                        <option value="">Delux</option>
+                        <option value="">Cozy</option>
+                        <option value="">Family</option>
+                        <option value="">Couples</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="guests regt col ">
+            <h3 id="subhead">GUESTS</h3>
+            <div class="d-flex">
+
+                <div class="my-auto">
+                    <span class="fa fa-chevron-down" style="color: grey;"></span>
+                </div>
+
+                <div>
+                    <select name="" id="" class="form-control py-2 ms-0"
+                        style="background-color: transparent; border:0; width: 100%; color: grey;">
+                        <option value="">Persons</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3-7</option>
+                        <option value="">8-15</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="available text-center col mb-0 py-auto" id="subhead"
+            style=" color: white; background-color: #c5a880; font-size:16px;">
+            <p class="mt-5 pt-4">CHECK <br> AVAILABILTY</p>
+        </div>
+        <div class="col" style="display: none;">
+
+        </div>
+    </div>
+
+
+    <!-- Featured-rooms -->
+
+    <div class="feat-room">
+        <h5 id="subhead" class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">UNWIND
+            SERVICES</h5>
+        <div class="title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Featured Rooms
+        </div>
+
+
+        <div class="row rooms">
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Family Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards cards2">
+
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Suite Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center" data-aos="flip-right" data-aos-duration="1200"
+                data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1608198399988-341f712c3711?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Deluxe Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row rooms">
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Family Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards cards2">
+
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Suite Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center" data-aos="flip-right" data-aos-duration="1200"
+                data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1608198399988-341f712c3711?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Deluxe Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-left: 39%;">
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">1</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">2</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">3</button>
+            </div>
+            <div class="btn px-2 mx-2" aria-label="Third group">
+                <button type="button" class="btn btn-secondary">4</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- services -->
+
+    <div class="services animate-on-scroll" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h5 id="subhead" class="text-center">UNWIND SERVICES</h5>
+        <div class="title text-center">Explore Our Hotel Services</div>
+        <div class="serv-element .container row ms-auto me-auto py-5 text-center">
+            <div class="ser1 ser col-lg-2 col-xl-2 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="100">
+                <i class="fa-solid fa-wifi fa-4x"></i>
+                <h3>Free Wifi</h3>
+            </div>
+            <div class="ser2 ser col-lg-2 col-xl-2 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="200">
+                <i class="fa-solid fa-laptop fa-4x"></i>
+                <h3>Easy Booking</h3>
+            </div>
+            <div class="ser ser3 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="300">
+                <i class="fa-solid fa-utensils fa-4x"></i>
+                <h3>Resturant</h3>
+            </div>
+            <div class="ser ser4 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="400">
+                <i class="fa-solid fa-person-swimming fa-4x"></i>
+                <h3>Swimming Pool</h3>
+            </div>
+            <div class="ser ser5 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="500">
+                <i class="fa-solid fa-hippo fa-4x"></i>
+                <h3>Beauty & Health</h3>
+            </div>
+            <div class="ser ser6 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="600">
+                <i class="fa-solid fa-circle-info fa-4x"></i>
+                <h3>Help & Support</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- footer -->
+
+
+    <footer class="foot" style="background-color: #1A1B1B;">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-lg col-md-6">
+                    <div class="logo">
+                        <a href="#" class="navbar-brand p-0 m-0 text-light">
+                            <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600; ">
+                                Aprampar</p>
+                            <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="" style="color: grey; font-size:small;">A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia.</p>
+                    <br>
+
+                    <ul style="list-style: none;" class="foot-icon p-0">
+                        <li><span class="fa-brands fa-facebook  p-3"></span></li>
+                        <li><span class="fa-brands fa-github  p-3"></span></li>
+                        <li><span class="fa-brands fa-instagram  p-3"></span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Free Wifi</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Easy Booking</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restaurant</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Swimming Pool</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Beauty & Health</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>60" Flatscreen TV</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Cold Aircondition</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Help & Support</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Quick</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>
+                                    Home</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Rooms</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restro & Bar</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Have a Question?</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-map me-2" style="color: #C4A881;"></span>
+                                    03 Fake St. Mountain View, San Francisco, California, USA</a></li>
+                            <li><a href="#"><span class="fa fa-phone me-2" style="color: #C4A881;"></span>7717770208</a>
+                            </li>
+                            <li><a href="#"><span class="fa fa-message me-2"
+                                        style="color: #C4A881;"></span>gauravpradhan7hai@gmail.com</a></li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    //owl-carousel
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Lower inc to slow and higher to slow
+                const inc = Math.floor(target / speed);
+
+                // console.log(inc);
+                // console.log(count);
+
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + inc;
+                    // Call function every ms
+                    setTimeout(updateCount, .5);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

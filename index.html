@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aprampar Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="./count.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        jQuery.noConflict();
+
+        function initializeOwlCarousel() {
+            $(".owl-carousel").owlCarousel({
+                items: 3, // Number of items to display at a time
+                loop: true, // Infinite loop
+                margin: 40, // Space between items
+                autoplay: true, // Autoplay
+                autoplayTimeout: 3000, // Autoplay interval in milliseconds
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 3,
+                    },
+                },
+            });
+        }
+
+        jQuery(document).ready(function () {
+            initializeOwlCarousel();
+        });
+
+        function smallScreenBehavior() {
+            // You can redefine the responsive settings for small screens
+            $(".owl-carousel").trigger('destroy.owl.carousel'); // Remove the existing Owl Carousel
+            $(".owl-carousel").owlCarousel({
+                items: 1, // Number of items to display at a time
+                loop: true, // Infinite loop
+                margin: 40, // Space between items
+                autoplay: true, // Autoplay
+                autoplayTimeout: 3000, // Autoplay interval in milliseconds
+            });
+        }
+
+        function checkScreenSize() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                // Execute small screen behavior
+                smallScreenBehavior();
+            } else {
+                // Restore the default behavior for larger screens
+                $(".owl-carousel").trigger('destroy.owl.carousel'); // Remove the existing Owl Carousel
+                initializeOwlCarousel(); // Reinitialize the Owl Carousel with the default settings
+            }
+        }
+
+        // Call the function initially to set the behavior based on the current screen size
+        checkScreenSize();
+
+        // Add a listener to recheck when the screen size changes
+        window.addEventListener("resize", checkScreenSize);
+    </script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+
+
+    <header class="text-light"
+        style="background-image: url('https://images.unsplash.com/photo-1529169436040-836f3d93f0f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+
+        <nav class="navbar navbar-expand-lg navbar-light text-center nav-cust py-4 text-light">
+
+            <!-- Brand/logo -->
+            <div class="logo">
+                <a href="#" class="navbar-brand p-0 m-0 text-light">
+                    <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600;">Aprampar
+                    </p>
+                    <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                </a>
+            </div>
+
+            <div class="list list-nav ms-auto">
+
+                <div class=" collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav text-center navlist">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./rooms.html">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Restro&Bar.html">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <span class=""><i class="fa-solid fa-bars" style="color: #C4A881;"></i></span>
+            </button>
+        </nav>
+        <!-- offcanvas -->
+
+
+        <div class="offcanvas offcanvas-top" tabindex="0" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+            style="background-color: #c5a880;">
+            <!-- <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div> -->
+            <div class="offcanvas-body">
+                <div class="list ms-auto canvas pb-0">
+
+
+                    <ul class=" navbar-nav text-center d-flex flex-column">
+
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Restro & Bar</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item p-0">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="head-cont text-center">
+            <p class="head-para">ENJOY YOUR WONDERFUL HOLIDAYS WITH A GREAT LUXURY EXPERIENCE!
+            </p>
+            <h1>Most Relaxing Place</h1>
+            <div class="ms-auto me-auto">
+                <button type="button" class="btn head-btn1 py-3 px-5">TAKE A TOUR <span></span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button type="button" class="btn text-light head-btn2 py-3 px-5">LEARN MORE <span></span> <i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div> -->
+        <div class="container-fluid mb-4 text-dark text-center head-cont ">
+            <div class="container-fluid py-5 cont-1">
+                <p class="head-para text-light">ENJOY YOUR WONDERFUL HOLIDAYS WITH A GREAT LUXURY EXPERIENCE!
+                </p>
+                <h1 class=" fw-bold text-light head-main" data-aos="fade-in" data-aos-duration="2000"
+                    data-aos-delay="100">Most Relaxing Place</h1>
+                <div class="ms-auto me-auto btn-main">
+                    <button type="button" class="btn head-btn1 py-3 px-5 m-0">TAKE A TOUR <span></span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <a href="./about.html
+                    ">
+                        <button type="button" class="btn text-light head-btn2 py-3 px-5">LEARN MORE <span></span> <i
+                                class="fa-solid fa-arrow-right"></i></button></a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+
+
+
+    <!-- check -->
+
+    <div class="container check p-0 row">
+        <div class="checkin regt col my-auto ">
+            <h3 id="subhead">CHECK-IN</h3>
+            <div class="form-field d-flex py-2 me-2" style="display: inline;">
+                <div class="icon my-auto"><span class="fa fa-calendar"></span></div>
+                <input type="text" class="form-control arrival_date in-edit" placeholder="Check-In Date"
+                    style="background-color: transparent; border:0; width: 70%;">
+            </div>
+        </div>
+        <div class="checkout regt col my-auto">
+            <h3 id="subhead">CHECK-OUT</h3>
+            <div class="form-field d-flex py-2 me-2" style="display: inline;">
+                <div class="icon my-auto"><span class="fa fa-calendar"></span></div>
+                <input type="text" class="form-control arrival_date in-edit" placeholder="Check-Out Date"
+                    style="background-color: transparent; border:0; width: 70%;">
+            </div>
+        </div>
+        <div class="checkout regt col ">
+            <h3 id="subhead">ROOMS</h3>
+            <div class="d-flex">
+
+                <div class="my-auto">
+                    <span class="fa fa-chevron-down" style="color: grey;"></span>
+                </div>
+
+                <div>
+                    <select name="" id="" class="form-control py-2 ms-0"
+                        style="background-color: transparent; border:0; width: 100%; color: grey;">
+                        <option value="">Suite</option>
+                        <option value="">Delux</option>
+                        <option value="">Cozy</option>
+                        <option value="">Family</option>
+                        <option value="">Couples</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="guests regt col ">
+            <h3 id="subhead">GUESTS</h3>
+            <div class="d-flex">
+
+                <div class="my-auto">
+                    <span class="fa fa-chevron-down" style="color: grey;"></span>
+                </div>
+
+                <div>
+                    <select name="" id="" class="form-control py-2 ms-0"
+                        style="background-color: transparent; border:0; width: 100%; color: grey;">
+                        <option value="">Persons</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3-7</option>
+                        <option value="">8-15</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="available text-center col mb-0 py-auto" id="subhead"
+            style=" color: white; background-color: #c5a880; font-size:16px;">
+            <p class="mt-5 pt-4">CHECK <br> AVAILABILTY</p>
+        </div>
+        <div class="col" style="display: none;">
+
+        </div>
+    </div>
+
+
+
+
+    <!-- about -->
+
+
+    <div class="about animate-on-scroll">
+
+
+
+        <div class="row">
+            <div class="col-lg-6 about-img text-center d-flex align-items-center" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="100">
+                <div class="row">
+                    <div class="col d-flex flex-column abt-card1">
+                        <div class="abt-img1 com1 " style="margin:0 0 20px 0;">
+                            <span><i class="fa-solid fa-mattress-pillow" style="color: #C4A881;"></i></span>
+                            <h3>Cozy Room</h3>
+                            <p style="color: grey;">Far far away, behind the word mountains, far from the countries
+                                Vokalia.</p>
+                        </div>
+                        <div class="abt-img2">
+                            <img src="https://images.unsplash.com/photo-1549227082-0ea18ce30397?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                class="img-fluid com2" alt="">
+                        </div>
+
+                    </div>
+                    <div class="col d-flex flex-column-reverse abt-card2">
+                        <div class="abt-img1 com2" style="margin:20px 0 0px 0;">
+                            <span><i class="fa-solid fa-mattress-pillow" style="color: #C4A881;"></i></span>
+                            <h3>Cozy Room</h3>
+                            <p style="color: grey;">Far far away, behind the word mountains, far from the countries
+                                Vokalia.</p>
+                        </div>
+                        <div class="abt-img2">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                class="img-fluid " alt="" height="200px">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 mt-5 about-cont" data-aos-delay="200" data-aos="fade-up" data-aos-duration="1000">
+                <div class="">
+                    <p id="subhead">ABOUT US</h7>
+                    <p class="title">Unwind A Hotel Booking Agency</p>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                        a large language ocean.</p>
+                    <button type="button" class="btn about-btn py-3 px-4 mt-4">BOOK YOUR ROOM NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services -->
+
+    <div class="services animate-on-scroll" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h5 id="subhead" class="text-center">UNWIND SERVICES</h5>
+        <div class="title text-center">Explore Our Hotel Services</div>
+        <div class="serv-element .container row ms-auto me-auto py-5 text-center">
+            <div class="ser1 ser col-lg-2 col-xl-2 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="100">
+                <i class="fa-solid fa-wifi fa-4x"></i>
+                <h3>Free Wifi</h3>
+            </div>
+            <div class="ser2 ser col-lg-2 col-xl-2 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="200">
+                <i class="fa-solid fa-laptop fa-4x"></i>
+                <h3>Easy Booking</h3>
+            </div>
+            <div class="ser ser3 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="300">
+                <i class="fa-solid fa-utensils fa-4x"></i>
+                <h3>Resturant</h3>
+            </div>
+            <div class="ser ser4 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="400">
+                <i class="fa-solid fa-person-swimming fa-4x"></i>
+                <h3>Swimming Pool</h3>
+            </div>
+            <div class="ser ser5 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="500">
+                <i class="fa-solid fa-hippo fa-4x"></i>
+                <h3>Beauty & Health</h3>
+            </div>
+            <div class="ser ser6 col-lg-2 col-xl-2  col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="600">
+                <i class="fa-solid fa-circle-info fa-4x"></i>
+                <h3>Help & Support</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- book-banner -->
+    <div class=" banner row d-flex justify-content-center m-0">
+        <div class="ban-cont col-8 " data-aos="fade-up" data-aos-duration="500" data-aos-delay="00">
+            <p id="subhead">FIND BEST HOTEL FOR LEAVING</p>
+            <p class="ban-title title text-light" style="font-size: 40px;">Find the Best Hotel in Your Next Vacation</p>
+        </div>
+        <div class="ban-btn col-3 text-center my-auto " data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="100">
+            <button type="button" class="btn py-3 px-5" style="display: inline;font-size: 12px;
+            font-weight: 700;">BOOK NOW</button>
+        </div>
+    </div>
+
+
+    <!-- Featured-rooms -->
+
+    <div class="feat-room">
+        <h5 id="subhead" class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">UNWIND
+            SERVICES</h5>
+        <div class="title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Featured Rooms
+        </div>
+
+
+        <div class="row rooms">
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1594560913095-8cf34bab82ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Family Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="cards cards2">
+
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Suite Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 justify-content-center" data-aos="flip-right" data-aos-duration="1200"
+                data-aos-delay="300">
+                <div class="cards">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1608198399988-341f712c3711?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">Deluxe Room</h3>
+                        <p class="text-center" style="color: #989998;">
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                            there
+                            live the blind texts.
+                        </p>
+                        <p class="mb-0 mt-2 text-center"><span class="me-3 price">$450 <small>/ night</small></span><a
+                                href="#" class="btn-custom">Book Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- RestroAndBAR -->
+
+    <div class="resabar">
+        <h5 id="subhead" class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">RESTO &
+            BAR</h5>
+        <div class="title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Restaurant & Bar
+        </div>
+
+        <div class="row resabar-main" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200"
+            style="margin: 5% 0;">
+            <div class="restimg col-xl-5 col-md-12 align-items-center" style="position: relative;">
+                <span>
+                    <i class='fa fa-utensils p-3'
+                        style='font-size:70px; color:white ; background-color: #C4A881; border-radius: 8px; vertical-align: middle; margin-top: 50%; margin-left: 94%; position: inherit;'></i>
+                </span>
+            </div>
+
+            <div class="col-md-12 col-xl-7 ">
+                <div class="row g-md-2 food">
+                    <div class="col-md-6">
+                        <div class="pricing-entry d-flex align-items-center" data-aos="fade-up" data-aos-delay="100"
+                            data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://plus.unsplash.com/premium_photo-1674595249447-5f0ce50f8dd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text justify-content-between">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="200" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1668724775591-f50dd8ed65a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$29.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="300" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1669972812358-807075a29ee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="400" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://plus.unsplash.com/premium_photo-1669557208960-41aee8a025c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="500" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1472211093208-3b31a17f3b12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$49.91</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="600" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1528207776546-365bb710ee93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Ultimate Overload</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="700" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1551276929-3f75211e0986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1900&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Grilled Beef with potatoes</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pricing-entry d-flex align-items-center aos-animate" data-aos="fade-up"
+                            data-aos-delay="800" data-aos-duration="1000">
+                            <div class="img1"
+                                style="background-image: url('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2058&q=80');">
+                            </div>
+                            <div class="desc ps-3">
+                                <div class="d-flex text">
+                                    <h3><span>Ham &amp; Pineapple</span></h3>
+                                    <span class="price">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- guests -->
+
+    <div class="guests" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h5 id="subhead" class="text-center">TESTIMONIAL</h5>
+        <div class="title text-center">Happy Guests</div>
+
+
+        <div class="testi mt-5 owl-carousel" id="testimonial-carousel">
+
+
+
+            <div class="test-head ">
+                <div class="container d-flex justify-content-between">
+                    <div class="test-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
+
+                        <span class="fa fa-quote-left"></span>
+                    </div>
+                    <div class="test-title">
+                        <h3>Roger Scott</h3>
+                        <div id="subhead">MARKETING MANAGER</div>
+                    </div>
+                </div>
+
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                    there
+                    live the blind texts.</p>
+            </div>
+            <div class="test-head ">
+                <div class="container d-flex justify-content-between">
+                    <div class="test-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
+                        <span class="fa fa-quote-left"></span>
+
+                    </div>
+                    <div class="test-title">
+                        <h3>Roger Scott</h3>
+                        <div id="subhead">MARKETING MANAGER</div>
+                    </div>
+                </div>
+
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                    there
+                    live the blind texts.</p>
+            </div>
+            <div class="test-head ">
+                <div class="container d-flex justify-content-between">
+                    <div class="test-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');">
+                        <span class="fa fa-quote-left"></span>
+
+                    </div>
+                    <div class="test-title">
+                        <h3>Roger Scott</h3>
+                        <div id="subhead">MARKETING MANAGER</div>
+                    </div>
+                </div>
+
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                    there
+                    live the blind texts.</p>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- counter -->
+
+
+    <div class=" row count m-0">
+        <div class=" col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <p class="ban-title title text-light">
+            <div class="counter text-center" data-target="39800" style="font-size: 40px; color: #C4A881;">0</div>
+            </p>
+            <p id="subead" class="text-center"># of Happy Guests</p>
+        </div>
+        <div class=" col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <p class="ban-title title text-light">
+            <div class="counter text-center" data-target="320" style="font-size: 40px; color: #C4A881;">0</div>
+            </p>
+            <p id="subead" class="text-center"># of Rooms</p>
+        </div>
+        <div class=" col-lg-3 col-md-6 col-sm-12 " data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <p class="ban-title title text-light">
+            <div class="counter text-center" data-target="1000" style="font-size: 40px; color: #C4A881;">0</div>
+            </p>
+            <p id="subead" class="text-center"># of Staffs</p>
+        </div>
+        <div class=" col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <p class="ban-title title text-light ">
+            <div class="counter text-center" data-target="587" style="font-size: 40px; color: #C4A881;">0</div>
+            </p>
+            <p id="subead" class="text-center"># of Destination</p>
+        </div>
+    </div>
+
+
+    <!-- blog -->
+
+    <div class="blog">
+        <h5 id="subhead" class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">OUR BLOG
+        </h5>
+        <div class="title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Recent Blog
+        </div>
+        <div class="blogrow row m-0 mt-5">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="cardblog">
+                    <div class="card-img-top"
+                        style="background-image: url('https://images.unsplash.com/photo-1503003378590-66f89f543bc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); border-top-left-radius: 5px;border-top-right-radius: 5px;">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text">
+                            <p class="meta d-flex flex-row justify-content-around" style="font-size: 13px;
+                                font-weight: 600;"><span>Admin</span> <span>Dec. 23, 2020</span><a href="#"
+                                    style="text-decoration: none; color: #C4A881;">3 Comments</a></p>
+                            <h3 class="head-blog mb-3"><a href="#" style="line-height: 1.5;
+                                    color: rgba(0, 0, 0, 0.8);
+                                    font-weight: 400;
+                                    font-size: 25px;
+                                    font-family: 'Times New Roman',
+                                 Times, serif; text-decoration: none;">Best Hotel Near Beach in Hawaii</a></h3>
+                            <p style="color: grey; letter-spacing: 1px; opacity: 80%;">A small river named Duden flows
+                                by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- gallery -->
+
+    <section class="gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <div class="container-fluid">
+            <div class="row g-3 gal-imgs">
+                <div class="col gal-item">
+                    <a href=""><img
+                            src="https://images.unsplash.com/photo-1677514504767-10298c908758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="" class="img-fluid"></a>
+                    <div class="middle">
+                        <div class="gal-icon"><span>
+                                <i class="fas fa-search fa-2x"
+                                    style="position: absolute; top: 45%; left: 45%; color: #C4A881;"></i>
+                            </span></div>
+                    </div>
+                </div>
+                <div class="col gal-item">
+                    <a href=""><img
+                            src="https://images.unsplash.com/photo-1511732351157-1865efcb7b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                            alt="" class="img-fluid"></a>
+                    <div class="middle">
+                        <div class="gal-icon"><span>
+                                <i class="fas fa-search fa-2x"
+                                    style="position: absolute; top: 45%; left: 45%; color: #C4A881;"></i>
+                            </span></div>
+                    </div>
+                </div>
+                <div class="col  gal-item">
+                    <a href=""><img
+                            src="https://images.unsplash.com/photo-1461988625982-7e46a099bf4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="" class="img-fluid"></a>
+                    <div class="middle">
+                        <div class="gal-icon"><span>
+                                <i class="fas fa-search fa-2x"
+                                    style="position: absolute; top: 45%; left: 45%; color: #C4A881;"></i>
+                            </span></div>
+                    </div>
+                </div>
+                <div class="col gal-item">
+                    <a href=""><img
+                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="" class="img-fluid"></a>
+                    <div class="middle">
+                        <div class="gal-icon"><span>
+                                <i class="fas fa-search fa-2x"
+                                    style="position: absolute; top: 45%; left: 45%; color: #C4A881;"></i>
+                            </span></div>
+                    </div>
+                </div>
+                <div class="col  gal-item">
+                    <a href=""><img
+                            src="https://images.unsplash.com/photo-1511732351157-1865efcb7b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                            alt="" class="img-fluid"></a>
+                    <div class="middle">
+                        <div class="gal-icon"><span>
+                                <i class="fas fa-search fa-2x"
+                                    style="position: absolute; top: 45%; left: 45%; color: #C4A881;"></i>
+                            </span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+
+
+    <footer class="foot" style="background-color: #1A1B1B;">
+        <div class="container-xl">
+            <div class="row mb-5 pb-5 justify-content-between">
+                <div class="col-lg col-md-6">
+                    <div class="logo">
+                        <a href="#" class="navbar-brand p-0 m-0 text-light">
+                            <p class="m-0 logo-head" style="font-size: 30px; letter-spacing: 2px; font-weight: 600; ">
+                                Aprampar</p>
+                            <p class="m-0" style="font-size: 16px;">HOTEL BOOKING</p>
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="" style="color: grey; font-size:small;">A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia.</p>
+                    <br>
+
+                    <ul style="list-style: none;" class="foot-icon p-0">
+                        <li><span class="fa-brands fa-facebook  p-3"></span></li>
+                        <li><span class="fa-brands fa-github  p-3"></span></li>
+                        <li><span class="fa-brands fa-instagram  p-3"></span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Services</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Free Wifi</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Easy Booking</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restaurant</a></li>
+                                <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Swimming Pool</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Beauty & Health</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>60" Flatscreen TV</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Cold Aircondition</a>
+                                    </li>
+                                    <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Help & Support</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Quick</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>
+                                    Home</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>About</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Rooms</a></li>
+                            <li><a href="#"><span class="fa fa-chevron-right me-2"></span>Restro & Bar</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg col-md-6">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="foot-head">Have a Question?</h2>
+                    </div>
+                    <ul class="list-unstyled">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="fa fa-map me-2" style="color: #C4A881;"></span>
+                                    03 Fake St. Mountain View, San Francisco, California, USA</a></li>
+                            <li><a href="#"><span class="fa fa-phone me-2" style="color: #C4A881;"></span>7717770208</a>
+                            </li>
+                            <li><a href="#"><span class="fa fa-message me-2"
+                                        style="color: #C4A881;"></span>gauravpradhan7hai@gmail.com</a></li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    //owl-carousel
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Lower inc to slow and higher to slow
+                const inc = Math.floor(target / speed);
+
+                // console.log(inc);
+                // console.log(count);
+
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + inc;
+                    // Call function every ms
+                    setTimeout(updateCount, .5);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
